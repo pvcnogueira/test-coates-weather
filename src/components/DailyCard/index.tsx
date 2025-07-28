@@ -14,13 +14,12 @@ interface WeatherProps {
             grnd_level?: number
         },
         weather: {
-            id: number,
-            main: string,
-            description: string,
+            id?: number,
+            main?: string,
+            description?: string,
             icon: string
         },
         weekday: string,
-        day: string,
     }
 }
 

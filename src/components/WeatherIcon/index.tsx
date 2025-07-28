@@ -34,60 +34,60 @@ const WeatherIcon = ({iconCode, ...props}: IconProps) => {
     const iconLetter = iconCode?.replace(/\d/g, '');
 
     if (iconNumber === 3) {
-        return (<CloudIcon {...props} />);
+        return (<CloudIcon data-testid="CloudIcon" {...props} />);
     }
     if (iconNumber === 4) {
-        return (<CloudyIcon {...props} />);
+        return (<CloudyIcon data-testid="CloudyIcon" {...props} />);
     }
     if (iconNumber === 13) {
-        return (<SnowflakeColdIcon {...props} />);
+        return (<SnowflakeColdIcon data-testid="SnowflakeColdIcon" {...props} />);
     }
     if (iconNumber === 50) {
-        return (<DustIcon {...props} />);
+        return (<DustIcon data-testid="DustIcon" {...props} />);
     }
     if (iconNumber === 1) {
         if (iconLetter === 'n') {
-            return (<MoonFullIcon {...props} />);
+            return (<MoonFullIcon data-testid="MoonFullIcon" {...props} />);
         }
         if (iconLetter === 'd') {
-            return (<DaySunnyIcon {...props} />);
+            return (<DaySunnyIcon data-testid="DaySunnyIcon" {...props} />);
         }
     }
     if (iconNumber === 2) {
         if (iconLetter === 'n') {
-            return (<DaySunnyOvercastIcon {...props} />);
+            return (<DaySunnyOvercastIcon data-testid="DaySunnyOvercastIcon" {...props} />);
         }
         if (iconLetter === 'd') {
-            return (<NightPartlyCloudyIcon {...props} />);
+            return (<NightPartlyCloudyIcon data-testid="NightPartlyCloudyIcon" {...props} />);
         }
     }
     if (iconNumber === 9) {
         if (iconLetter === 'n') {
-            return (<DayShowersIcon {...props} />);
+            return (<DayShowersIcon data-testid="DayShowersIcon" {...props} />);
         }
         if (iconLetter === 'd') {
-            return (<NightShowersIcon {...props} />);
+            return (<NightShowersIcon data-testid="NightShowersIcon" {...props} />);
         }
     }
     if (iconNumber === 10) {
         if (iconLetter === 'n') {
-            return (<DayRainIcon {...props} />);
+            return (<DayRainIcon data-testid="DayRainIcon" {...props} />);
         }
         if (iconLetter === 'd') {
-            return (<NightRainIcon {...props} />);
+            return (<NightRainIcon data-testid="NightRainIcon" {...props} />);
         }
     }
     if (iconNumber === 11) {
         if (iconLetter === 'n') {
-            return (<DaySleetStormIcon {...props} />);
+            return (<DaySleetStormIcon data-testid="DaySleetStormIcon" {...props} />);
         }
         if (iconLetter === 'd') {
-            return (<NightThunderstormIcon {...props} />);
+            return (<NightThunderstormIcon data-testid="NightThunderstormIcon" {...props} />);
         }
     }
 
     // Retorno padrão quando nenhuma condição é atendida
-    return (<DaySunnyIcon {...props} />);
+    return (<DaySunnyIcon data-testid="DaySunnyIcon" {...props} />);
 }
 
 export default WeatherIcon;
