@@ -34,15 +34,5 @@
    
 the app will run on `http://localhost:3000`
 
-
-# How to run the tests
-1. Navigate to the project directory.
-   ```bash
-   cd weather-app
-   ```
-2. Run the tests:
-   ```bash
-   npm run test
-   ```
 ## mockup
 ![Mockup](./src/assets/mockup.png)

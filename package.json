@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "test": "jest --config --jsx ./jest.config.ts"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^19.1.0",
