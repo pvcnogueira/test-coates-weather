@@ -1,0 +1,171 @@
+:root {
+  font-family: "Inter", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #000000;
+  background-color: #FFFFFF;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.color{
+  &-black{
+    color: #000 !important;
+  }
+  &-white{
+    color: #fff !important;
+  }
+}
+
+.flex {
+  display: flex;
+
+  &-col {
+    flex-direction: column;
+  }
+
+  &-row {
+    flex-direction: row;
+  }
+}
+
+.justify {
+  &-between {
+    justify-content: space-between;
+  }
+
+  &-center {
+    justify-content: center;
+  }
+
+  &-start {
+    justify-content: flex-start;
+  }
+
+  &-end {
+    justify-content: flex-end;
+  }
+}
+
+.align {
+  &-center {
+    align-items: center;
+  }
+
+  &-start {
+    align-items: flex-start;
+  }
+
+  &-end {
+    align-items: flex-end;
+  }
+}
+
+small, .small{
+  font-size: .5rem;
+}
+medium, .medium{
+  font-size: .75rem;
+}
+
+.overflow{
+  &-hidden{
+    overflow: hidden;
+  }
+  &-auto{
+    overflow: auto;
+  }
+  &-y-auto{
+    overflow-y: auto;
+  }
+}
+
+// Variables for padding sizes
+$padding-sizes: (
+        0: 0,
+        1: 0.5rem,
+        2: 1rem,
+        3: 1.5rem,
+        4: 2rem,
+        5: 2.5rem,
+        6: 3rem
+);
+
+// Map for padding directions
+$padding-directions: (
+        'p': 'padding',
+        'pt': 'padding-top',
+        'pr': 'padding-right',
+        'pb': 'padding-bottom',
+        'pl': 'padding-left',
+        'px': ('padding-left', 'padding-right'),
+        'py': ('padding-top', 'padding-bottom')
+);
+
+// Generate padding classes
+@each $direction-key, $property in $padding-directions {
+  @each $size-key, $size-value in $padding-sizes {
+    .#{$direction-key}-#{$size-key} {
+      @if type-of($property) == 'list' {
+        // For px and py classes that need multiple properties
+        @each $prop in $property {
+          #{$prop}: $size-value;
+        }
+      } @else {
+        // For single direction padding
+        #{$property}: $size-value;
+      }
+    }
+  }
+}
+
+
+// Variables for margin sizes
+$margin-sizes: (
+        0: 0,
+        1: 0.5rem,
+        2: 1rem,
+        3: 1.5rem,
+        4: 2rem,
+        5: 2.5rem,
+        6: 3rem
+);
+
+// Map for margin directions
+$margin-directions: (
+        'm': 'margin',
+        'mt': 'margin-top',
+        'mr': 'margin-right',
+        'mb': 'margin-bottom',
+        'ml': 'margin-left',
+        'mx': ('margin-left', 'margin-right'),
+        'my': ('margin-top', 'margin-bottom')
+);
+
+// Generate margin classes
+@each $direction-key, $property in $margin-directions {
+  @each $size-key, $size-value in $margin-sizes {
+    .#{$direction-key}-#{$size-key} {
+      @if type-of($property) == 'list' {
+        // For px and py classes that need multiple properties
+        @each $prop in $property {
+          #{$prop}: $size-value;
+        }
+      } @else {
+        // For single direction margin
+        #{$property}: $size-value;
+      }
+    }
+  }
+}

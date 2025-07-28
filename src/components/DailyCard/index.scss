@@ -1,0 +1,59 @@
+.daily-card {
+  background: -webkit-linear-gradient(top, #B7D9FD 0%, #5B92A9 100%);
+  background: -moz-linear-gradient(top, #B7D9FD 0%, #5B92A9 100%);
+  background: -o-linear-gradient(top, #B7D9FD 0%, #5B92A9 100%);
+  background: linear-gradient(180deg, #B7D9FD 0%, #5B92A9 100%);
+  background-color: #B7D9FD;
+  height: 250px;
+  width: 150px;
+  border-radius: 20px;
+  padding: 2rem;
+  @media (min-width: 576px) and (max-width: 767px) {
+
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+
+  }
+  @media (min-width: 1200px) and (max-width: 1199px) {
+
+  }
+  @media (min-width: 1400px) {
+
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    text-align: center;
+    padding: 0px 0px 1.5rem;
+    margin: 0;
+  }
+
+  .card-weather-icon {
+    width: 120px;
+    height: 120px;
+  }
+
+  .temperature {
+    &-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &.l {
+      align-self: flex-start;
+    }
+
+    &.r {
+      align-self: flex-end;
+    }
+
+    margin: 0;
+    text-align: center;
+    line-height: 2.5rem;
+    font-size: 2rem;
+  }
+}

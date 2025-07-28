@@ -1,0 +1,229 @@
+/* Small devices */
+@media (min-width: 200px) {
+  .search-bar {
+    position: absolute;
+    overflow: hidden;
+    max-width: 0px;
+  }
+  .search-bar.show {
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100vw;
+  }
+  .search-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1rem;
+  }
+  .search-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+  .disclaimer {
+    width: 88vw;
+  }
+}
+@media (min-width: 1200px) {
+  .search-bar {
+    position: relative;
+  }
+  .search-icon {
+    display: none;
+  }
+  .disclaimer {
+    width: 100%;
+  }
+}
+@media (min-width: 200px) and (max-width: 767px) {
+  .daily-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .main-weather-icon {
+    width: 250px;
+    height: 250px;
+  }
+  p.city-name {
+    font-size: 4rem;
+  }
+  p.temperature {
+    font-size: 6rem;
+  }
+}
+/* Medium devices */
+@media (min-width: 768px) and (max-width: 991px) {
+  .daily-container {
+    gap: 2rem 8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .main-weather-icon {
+    width: 250px;
+    height: 250px;
+  }
+  p.city-name {
+    font-size: 4rem;
+  }
+  p.temperature {
+    font-size: 6rem;
+  }
+}
+/* Large devices */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .daily-container {
+    gap: 2rem 8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .main-weather-icon {
+    width: 250px;
+    height: 250px;
+  }
+  p.city-name {
+    font-size: 4rem;
+  }
+  p.temperature {
+    font-size: 6rem;
+  }
+}
+/* Extra large devices */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .search-bar {
+    min-width: 200px;
+    max-width: 300px;
+  }
+  .search-icon {
+    display: none;
+  }
+  .main-weather-icon {
+    width: 200px;
+    height: 200px;
+  }
+  p.city-name {
+    font-size: 3rem;
+  }
+  p.temperature {
+    font-size: 5rem;
+  }
+  .daily-container {
+    gap: 2rem 6rem;
+    flex-wrap: wrap;
+  }
+}
+/* XX-Large devices */
+@media (min-width: 1400px) {
+  .search-bar {
+    max-width: 500px;
+  }
+  .main-weather-icon {
+    width: 300px;
+    height: 300px;
+  }
+  p.city-name {
+    font-size: 4rem;
+  }
+  p.temperature {
+    font-size: 6rem;
+  }
+  .daily-container {
+    gap: 2.5rem;
+  }
+}
+.daily-container {
+  margin: 2rem 0px;
+}
+
+.container {
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.search-bar {
+  box-shadow: 0 0 10px 0px rgba(196, 196, 196, 0.768627451);
+  min-height: 100%;
+  background-color: #f7f7f7;
+  transition: max-width 0.3s ease-in-out;
+}
+.search-bar .search-button {
+  padding: 0.6rem;
+  margin-left: -2.75rem;
+}
+
+.close-icon {
+  color: #000;
+  width: 40px;
+  height: 40px;
+}
+
+p.city-name, p.temperature {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+input.search-input {
+  width: 90%;
+}
+input.search-input::placeholder {
+  color: #a6a6a6;
+  font-size: 0.6rem;
+}
+
+.loading-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-container .loading-icon {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
+  }
+  50% {
+    transform: translateY(-5px);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9));
+  }
+}
+@keyframes shine {
+  from {
+    transform: translateX(-100%) rotate(30deg);
+  }
+  to {
+    transform: translateX(100%) rotate(30deg);
+  }
+}
+.loading-container .loading-icon::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: rotate(30deg);
+  animation: shine 4s infinite;
+}
+
+.main {
+  background: #3B68BE; /* Fallback color */
+  background: -webkit-linear-gradient(top, #3B68BE 0%, #8AD6FA 100%); /* For Safari */
+  background: -moz-linear-gradient(top, #3B68BE 0%, #8AD6FA 100%); /* For Firefox */
+  background: linear-gradient(180deg, #3B68BE 0%, #8AD6FA 100%); /* Standard syntax */
+  min-height: 100vh;
+  width: 100%;
+  color: #fff;
+}
+
+/*# sourceMappingURL=App.css.map */
