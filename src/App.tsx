@@ -139,8 +139,8 @@ function App() {
                         <div className="daily-weather">
                             <h2><strong>5-days forecast</strong></h2>
                             <div className="daily-container flex justify-center">
-                                {forecastWeather.map((forecast) => (
-                                    <DailyCard weatherData={forecast}/>
+                                {forecastWeather.map((forecast, index) => (
+                                    <DailyCard key={`dailycard-${index}`} weatherData={forecast}/>
                                 ))}
                             </div>
                         </div>
