@@ -33,7 +33,7 @@ const normalizeForecastToWeather = (forecastData: TForecast): TForecastResponse[
         }
 
         for (const forecast of forecastData.list) {
-            if (forecast.dt_txt.includes(key)) {
+            if (forecast.dt_txt.includes(`key 12:00:00`)) {
                 weather = forecast.weather[0];
                 break;
             }

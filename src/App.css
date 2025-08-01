@@ -24,6 +24,9 @@
   .disclaimer {
     width: 88vw;
   }
+  .main {
+    max-height: 100vh;
+  }
 }
 @media (min-width: 1200px) {
   .search-bar {

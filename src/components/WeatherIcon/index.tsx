@@ -33,6 +33,8 @@ const WeatherIcon = ({iconCode, ...props}: IconProps) => {
     const iconNumber = Number(iconCode?.replace(/\D/g, ''));
     const iconLetter = iconCode?.replace(/\d/g, '');
 
+    console.log(iconNumber, ' - ', iconLetter);
+
     if (iconNumber === 3) {
         return (<CloudIcon data-testid="CloudIcon" {...props} />);
     }
